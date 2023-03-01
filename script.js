@@ -25,14 +25,13 @@ function filterCards() {
 
 // Filtering by city
 const filterSelect = document.querySelector('header select')
-const optionsCache = document.querySelectorAll('select option')
 
 filterSelect.addEventListener('click', filterCardsBySelect)
 
 function filterCardsBySelect() {
   let citySelected = filterSelect.value
   for (let card of cards) {
-    let cityId = card.getElementsByClassName('location')[0].id
+    let cityId = card.lastElementChild.lastElementChild.getAttribute('id')
     if(citySelected != 0) {
       if(cityId === citySelected) {
         card.style.display = 'block'
