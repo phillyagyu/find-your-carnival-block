@@ -47,12 +47,6 @@ function filterCardsBySelect() {
   }
 }
 
-
-// function filterCardsBySelect() {
-//   console.log(filterSelect.value)
-// }
-
-
 // Adding no submit event
 const form = document.querySelector('form')
 form.addEventListener('submit', function(event) {
